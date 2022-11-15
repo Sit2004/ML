@@ -1,0 +1,29 @@
+import pandas as pd
+import numpy as np
+
+data = pd.read_csv("PATH")
+
+data.shape
+
+data.not.null()
+
+data.info()
+
+data.isin([0]).any()
+
+data["Age"].mean()
+
+
+
+
+from sklearn.model_selection import train_test_split
+
+X = data[['ChestPain', 'Age', 'Sex', 'RestBP', 'Chol']]
+y = data[['RestBP', 'Chol']]
+X_train, X_test, y_train, y_text = train_test_split(X, y, test_size=0.25,
+random_state=10)
+X_train
+
+
+
+
